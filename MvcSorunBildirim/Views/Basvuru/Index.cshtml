@@ -1,0 +1,97 @@
+﻿@model MvcSorunBildirim.Models.Basvuru
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Kayıt oluştur</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(x => x.Kurum)
+                @Html.DropDownListFor(x => x.Kurum_Id, (SelectList)ViewBag.Kurumlar, "-Seçiniz-", new { @class = "form-select", required = "required" })
+            </div>
+
+            <div class="col-md-6">
+                @Html.LabelFor(x => x.Konu)
+                @Html.TextBoxFor(x => x.Konu, new { @class = "form-control", required = "required" })
+            </div>
+
+            <div class="col-md-6">
+                @Html.LabelFor(x => x.Sikayet)
+                @Html.TextAreaFor(x => x.Sikayet, new { @class = "form-control", required = "required" })
+            </div>
+
+            <div class="col-md-6">
+                @Html.LabelFor(x => x.Adres)
+                @Html.TextAreaFor(x => x.Adres, new { @class = "form-control", rows = "5" })
+            </div>
+            <div class="col-md-6">
+                <input type="file" name="yuklenecekDosya" multiple="multiple" />
+            </div>
+            @Html.HiddenFor(x => x.Enlem)
+            @Html.HiddenFor(x => x.Boylam)
+            <div class="col-md-12" id="error-row"></div>
+            <div class="col-md-12">
+                <br />
+                <input type="submit" class="btn btn-primary" value="İleri" />
+            </div>
+
+        </div>
+    </div>
+</form>
+
+
+<script>
+    getLocation();
+    function getLocation() {
+        if (navigator.geolocation) {
+            var options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            };
+            navigator.geolocation.getCurrentPosition(showPosition, showError, options);
+        }
+        else {
+            alert('Konum servisleri desteklenmemekedir!')
+        }
+    }
+    function showPosition(position) {
+        var enlem = position.coords.latitude;
+        var boylam = position.coords.longitude;
+        $('#Enlem').attr('value', enlem);
+        $('#Boylam').attr('value', boylam);
+        $('#form-submit').fadeIn();
+    }
+    function showError(error) {
+        $('#error-row').fadeIn();
+        var errormessage = "Konum servisleri kapalı olduğundan ziyaret gerçekleştiremezsiniz";
+        if (error.code) {
+            if (error.code == 1) {
+                errormessage = "Konum bilgisi talebini reddettiniz!"
+            }
+            else if (err.code == 2) {
+                errormessage = "Konum bilgisi mevcut değil!"
+            }
+            else if (err.code == 3) {
+                errormessage = "Konumunuzu alma isteği zaman aşımına uğradı!"
+            }
+            else {
+                errormessage = "Bilinmeyen bir hata oluştu!"
+            }
+            $("#error-message").text(errormessage + " Bu sebepten dolayı ziyaret gerçekleştiremezsiniz!");
+        }
+        else {
+            $("#error-message").text(errormessage);
+        }
+    }
+</script>
+
+
+
+
+

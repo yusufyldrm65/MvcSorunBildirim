@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sorun Bildirme</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/form-elements.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/media-queries.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!-- Favicon and touch icons -->
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+
+	<!-- Top menu -->
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Sorun Bildirme</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="top-navbar-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<span class="li-text">
+							Follow us:
+						</span>
+						<span class="li-social">
+							<a href="http://www.facebook.com/pages/Azmindcom/196582707093191" target="_blank"><i class="fa fa-facebook"></i></a>
+							<a href="http://twitter.com/anli_zaimi" target="_blank"><i class="fa fa-twitter"></i></a>
+							<a href="veritabani6565@gmail.com" target="_blank"><i class="fa-mail-forward"></i></a>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Description -->
+	<div class="description-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 description-title">
+					<h2>SORUN BİLDİRİM UYGULAMASI</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 description-text">
+					<p>
+						Bu YazılımVan Projesidir.
+						
+					</p>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Multi Step Form -->
+	<div class="msf-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 msf-title">
+					
+					<p>Lütfen aşağıdaki formu doldurunuz:</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 msf-form">
+
+					<form role="form" action="" method="post" class="form-inline">
+
+						<fieldset>
+							<h4>Kayıt Oluştur <span class="step">(Adım 1 / 3)</span></h4>
+							<br>
+							<div class="form-group">
+								<label for="first-name">Kurum Seçiniz</label><br>
+								<input type="text" name="kurum" class="kurum form-control" id="Kurum" required>
+							</div>
+							<div class="form-group">
+								<label for="last-name">Şikayetinizin Konusu:</label><br>
+								<input type="text" name="konu" class="konu form-control" id="konu secimi"required>
+							</div>
+							<div class="form-group">
+								<label for="last-name">Şikayetinizi Yazınız</label><br>
+								<input type="text" name="last-name" class="last-name form-control" id="last-name"required>
+							</div>
+							<div class="form-group">
+								<label for="last-name">Adresi Yazınız</label><br>
+								<input type="text" name="last-name" class="last-name form-control" id="last-name">
+							</div>
+							<div class="col-md-6">
+								<input type="file" name="yuklenecekDosya" multiple="multiple"  required />
+							</div>
+							<br>
+							<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+						</fieldset>
+
+						<fieldset>
+							<h4>Kullanıcı Bilgileri <span class="step">(Adım 2 / 3)</span></h4>
+
+							
+							<div class="form-group">
+									<label for="last-name">Adınızı Soyadınızı Yazınız:</label><br>
+									<input type="text" name="adsoyad" class="adsoyad form-control" id="adsoyad"required>
+							</div>
+
+							<div class="form-group">
+								<label for="mobile-phone">Telefon Numaranızı Giriniz:</label><br>
+								<input type="text" name="mobile-phone" class="mobile-phone form-control" id="mobile-phone" required>
+							</div>
+							<div class="form-group">
+									<label for="email">Email Adresinizi Yazınız:</label><br>
+									<input type="text" name="email" class="email form-control" id="email" required>
+
+
+										<br>
+										<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+										<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+							</div>
+									
+														
+
+						<fieldset>
+							<h4>Doğrulama Ekranı <span class="step">(Adım 3 / 3)</span></h4>
+						
+							<html>
+							<head>
+								<meta charset="UTF-8">
+								<h2> Doğrulama Ekranı  </h2>
+								<meta name="viewport" content="width=device-width, initial-scale=1">
+							</head>
+							<br />
+
+							<div class="container">
+								<!-- Instructions -->
+								<div class="row">
+									<div class="alert alert-success col-md-12" role="alert" id="notes">
+										<h4>NOT!!!</h4>
+										<ul>
+											<li>Mailinize gönderilen doğrulama kodunu aşağıya girin.</li>
+											<li>Bir şekilde doğrulama e-postasını almadıysanız doğrulama e-postasını yeniden gönderin <a href="#">doğrulama e-postasını tekrar gönder</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- Verification Entry Jumbotron -->
+								<div class="row">
+									<div class="col-md-12">
+										<div class="jumbotron text-center">
+											<h2>e-mail Onay kodunu giriniz</h2>
+											<form method="post" action="confirm" role="form">
+												<div class="col-md-9 col-sm-12">
+													<div class="form-group form-group-lg">
+														<input type="text" class="form-control col-md-6 col-sm-6 col-sm-offset-2" name="verifyCode" required>
+														<input class="btn btn-primary" type="submit" value="Gönder">
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<br>
+							<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+							<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+
+
+						</fieldset>
+
+						
+												
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Javascript -->
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.backstretch.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+
+	<!--[if lt IE 10]>
+		<script src="assets/js/placeholder.js"></script>
+	<![endif]-->
+
+</body>
+
+</html>

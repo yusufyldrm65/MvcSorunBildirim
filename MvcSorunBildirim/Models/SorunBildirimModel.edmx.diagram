@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="672d0158a8bf437d8a6607854b47dfa5" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Basvuru" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Birim" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Birim_Yetkili" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Cevaplar" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Dokuman_Turu" Width="1.5" PointX="6" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Dokumanlar" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Kanit" Width="1.5" PointX="8.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Kurum" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Kurum_Yetkili" Width="1.5" PointX="6" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Loglar" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sevk" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Yetkililer" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__Basvuru__kurum_i__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Basvuru__yetkili__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Cevaplar__is_act__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Dokumanla__is_ac__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Kanit__is_active__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sevk__is_active__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_BirimYetkili_BirimId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Sevk_BirimId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Kanit__dokuman_t__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Kurum_Yet__is_ac__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Kurum_Yet__yetki__4316F928" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

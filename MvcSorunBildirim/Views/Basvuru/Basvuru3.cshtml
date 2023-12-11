@@ -1,0 +1,35 @@
+﻿@{
+    @model MvcSorunBildirim.Models.Basvuru
+    ViewBag.Title = "Kullanıcı Bilgileri";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <!-- Instructions -->
+    <div class="row">
+        <div class="alert alert-success col-md-12" role="alert" id="notes">
+            <h4>NOT!!!</h4>
+            <ul>
+                <li>Mailinize gönderilen doğrulama kodunu aşağıya girin.</li>
+                <li>Bir şekilde doğrulama e-postasını almadıysanız doğrulama e-postasını yeniden gönderin <a href="#">doğrulama e-postasını tekrar gönder</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Verification Entry Jumbotron -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron text-center">
+                <h2>e-mail Onay kodunu giriniz</h2>
+                <form method="post" role="form">
+                    <div class="col-md-9 col-sm-12">
+                        <div class="form-group form-group-lg">
+                            @Html.HiddenFor(x=>x.Basvuru_Id)
+                            <input type="text" class="form-control col-md-6 col-sm-6 col-sm-offset-2" name="Dogrulama_Kodu" required>
+                            <input class="btn btn-primary" type="submit" value="Gönder">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

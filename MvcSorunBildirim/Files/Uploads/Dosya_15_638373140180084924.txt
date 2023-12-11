@@ -1,0 +1,58 @@
+
+123456789
+10
+11
+Ε
+12
+13
+14
+15
+16
+{
+17
+18
+}
+19
+20
+21
+22
+23
+24
+Eusing LoginTutorial. Models; using System;
+using System.Collections.Generic; using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Security;
+Enamespace LoginTutorial.Controllers
+{
+public class SecurityController: Controller
+{
+tutorialEntities db = new tutorial Entities();
+public ActionResult Login()
+return View();
+[HttpPost]
+public ActionResult Login (Users user)
+var userInDb = db.Users. FirstOrDefault(x => x.userName == user.userName && x.password if (userInDb !=null)
+25
+{
+26
+27
+FormsAuthentication.SetAuthCookie(user.userName, false); return RedirectToAction ("Index", "Home");
+28
+}
+29
+else
+30
+{
+31
+32
+ViewBag.Mesaj return View();
+=
+"Geçersiz Kullanıcı. Kullanıcı Adı yada Şifre Hatalı";
+33
+34
+35
+36
+37
+==
+user.password);
