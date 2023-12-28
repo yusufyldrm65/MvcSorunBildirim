@@ -15,7 +15,7 @@ namespace MvcSorunBildirim.Controllers
         Sorun_BildirimEntities db = new Sorun_BildirimEntities();
         public ActionResult Index()
         {
-            var Kurumlar = db.Kurum.ToList();
+            var Kurumlar = db.Kurum.OrderBy(i=>i.Kurum_Adi).ToList();
             ViewBag.Kurumlar = new SelectList(Kurumlar, "Kurum_Id", "Kurum_Adi");
             return View();
         }

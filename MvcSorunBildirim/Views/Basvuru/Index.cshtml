@@ -5,31 +5,33 @@
 }
 
 
+
 <h2>Kayıt oluştur</h2>
 
 <form method="post" enctype="multipart/form-data">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div  class="col-md-6">
                 @Html.LabelFor(x => x.Kurum)
                 @Html.DropDownListFor(x => x.Kurum_Id, (SelectList)ViewBag.Kurumlar, "-Seçiniz-", new { @class = "form-select", required = "required" })
+                
             </div>
 
             <div class="col-md-6">
                 @Html.LabelFor(x => x.Konu)
-                @Html.TextBoxFor(x => x.Konu, new { @class = "form-control", required = "required" })
+                @Html.TextBoxFor(x => x.Konu, new { @class = "form-control", required = "required", maxlength = "50" })
             </div>
 
             <div class="col-md-6">
-                @Html.LabelFor(x => x.Sikayet)
-                @Html.TextAreaFor(x => x.Sikayet, new { @class = "form-control", required = "required" })
+                @Html.Label("Şikayet")
+                @Html.TextAreaFor(x => x.Sikayet, new { @class = "form-control", required = "required", maxlength="250" })
             </div>
 
             <div class="col-md-6">
                 @Html.LabelFor(x => x.Adres)
-                @Html.TextAreaFor(x => x.Adres, new { @class = "form-control", rows = "5" })
+                @Html.TextAreaFor(x => x.Adres, new { @class = "form-control", rows = "5", maxlength = "80" })
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-3">
                 <input type="file" name="yuklenecekDosya" multiple="multiple" />
             </div>
             @Html.HiddenFor(x => x.Enlem)
@@ -37,7 +39,8 @@
             <div class="col-md-12" id="error-row"></div>
             <div class="col-md-12">
                 <br />
-                <input type="submit" class="btn btn-primary" value="İleri" />
+                <button type="submit" class="btn btn-next">Sonraki <i class="fa fa-angle-right"></i></button>
+                @*<input type="submit" class="btn btn-primary" value="İleri" />*@
             </div>
 
         </div>

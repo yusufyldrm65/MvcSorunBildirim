@@ -7,8 +7,32 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="~/template/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/template/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/template/assets/css/form-elements.css">
+    <link rel="stylesheet" href="~/template/assets/css/style.css">
+    <link rel="stylesheet" href="~/template/assets/css/media-queries.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+ 
 </head>
-<body style=" background-image: url('../../models/foto/foto.png');">
+<body style="background-image: url('../../template/assets/img/1.png'); ">
+     
+
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
             @Html.ActionLink("Sorun Bildirim Uygulaması", "Index", "Basvuru", new { area = "Basvuru" }, new { @class = "navbar-brand" })
@@ -18,15 +42,15 @@
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Kullanıcı Bilgileri", "Basvuru2", "Basvuru", new { area = "Basvuru" }, new { @class = "nav-link" })</li>
+                     <li>@Html.ActionLink("Kullanıcı Bilgileri", "Basvuru2", "Basvuru", new { area = "Basvuru" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Doğrulama Ekranı", "Basvuru3", "Basvuru", new { area = "Basvuru" }, new { @class = "nav-link" })</li>
-                   
-                    
+
+
                 </ul>
             </div>
         </div>
     </nav>
-  
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -40,6 +64,16 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
+
+    <!-- Javascript -->
+    <script src="~/template/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="~/template/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/template/assets/js/jquery.backstretch.min.js"></script>
+    <script src="~/template/assets/js/scripts.js"></script>
+
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+    <![endif]-->
 
 </body>
 </html>

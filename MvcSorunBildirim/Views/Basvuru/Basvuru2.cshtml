@@ -14,24 +14,24 @@
         <div class="row ">
             <div class="col-md-12">
                 @Html.LabelFor(x => x.AdSoyad)
-                @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control", required = "required" })
+                @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control", required = "required", maxlength = "25" })
             </div>
 
 
             <div class="col-md-12">
                 @Html.LabelFor(x => x.Email)
-                @Html.TextBoxFor(x => x.Email, new { @class = "form-control", required = "required", type = "email" })
+                @Html.TextBoxFor(x => x.Email, new { @class = "form-control", required = "required", type = "email", maxlength = "30" })
             </div>
 
             <div class="col-md-12">
                 @Html.LabelFor(x => x.Telefon)
-                @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control", required = "required", type = "tel" })
+                @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control", required = "required", type = "tel", maxlength = "11" })
             </div>
 
 
             <div class="col-md-12">
                 <br />
-                <input type="submit" class="btn btn-primary" value="İlerle" />
+                <button type="submit" class="btn btn-next">Sonraki <i class="fa fa-angle-right"></i></button>
             </div>
 
 
