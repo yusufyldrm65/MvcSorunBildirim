@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BasvuruController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -328,6 +329,11 @@
     <Content Include="template\assets\font-awesome\scss\_rotated-flipped.scss" />
     <Content Include="template\assets\font-awesome\scss\_stacked.scss" />
     <Content Include="template\assets\font-awesome\scss\_variables.scss" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Admin\CevapEdit.cshtml" />
+    <Content Include="Views\Admin\DurumEdit.cshtml" />
+    <Content Include="Views\Admin\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
